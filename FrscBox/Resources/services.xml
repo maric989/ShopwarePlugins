@@ -1,0 +1,20 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!--<service id="frsc_box.subscriber.frontend" class="FrscBox\Subscriber\Frontend">-->
+            <!--<argument type="service" id="service_container"/>-->
+            <!--<argument>%frsc_box.plugin_dir%</argument>-->
+            <!--<tag name="shopware.event_subscriber"/>-->
+        <!--</service>-->
+
+        <service id="frsc_box.PostDispatchSecure_Checkout"
+                 class="FrscBox\Subscriber\PostDispatchSecure_Checkout">
+            <argument type="service" id="service_container" />
+            <tag name="shopware.event_subscriber"/>
+        </service>
+
+    </services>
+
+</container>
